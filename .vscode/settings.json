@@ -1,0 +1,5 @@
+{
+  "python.linting.pylintEnabled": true,
+  "python.linting.enabled": true,
+  "python.pythonPath": "C:/Users/Mike/Documents/git-repo/venvs_python/covidClass/Scripts/python.exe"
+}
