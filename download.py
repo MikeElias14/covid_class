@@ -16,7 +16,7 @@ def get_video(video_url, lect_path):
     f.write(r.content)
 
 def get_slides(elements, lect_path):
-  slides_path = lect_path + '\\slides'
+  slides_path = lect_path + '/slides'
   make_dir(slides_path)
 
   for slide in elements:
@@ -29,19 +29,15 @@ def get_slides(elements, lect_path):
 
 
 def main():
-  driver = webdriver.Chrome('./chromedriver')
 
+  # set vars
   learn_url = "https://learn.uwaterloo.ca"
-
-  # bongo_url = input("Enter the lecture url: ") 
-  bongo_url = "https://bongo-ca.youseeu.com/spa/student/class/190649/meeting-preview/479604?lti-scope=d2l-resource-syncmeeting-open"
-
-  # file_path = input("Enter the file path where you would like to save this lecture: ")
-  file_path = 'C:\\Users\\Mike\\Documents\\4aSchool'
-
+  bongo_url = input("Enter the lecture url: ") 
+  file_path = input("Enter the file path where you would like to save this lecture: ")
   make_dir(file_path)
 
   # visit home page
+  driver = webdriver.Chrome('./chromedriver')
   driver.get(learn_url)
 
   # set cookies
